@@ -17,6 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Approve PR
         run: |
           echo "Approving PR ${{ github.event.inputs.pr_number }}"
