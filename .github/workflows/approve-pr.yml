@@ -27,3 +27,5 @@ jobs:
         run: |
           echo "Approving PR ${{ github.event.inputs.pr_number }}"
           gh pr review ${{ github.event.inputs.pr_number }} --approve
+        env:
+          GH_TOKEN: ${{ github.token }}
